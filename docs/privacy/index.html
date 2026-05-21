@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LeadOne 개인정보 처리방침</title>
+  <meta
+    name="description"
+    content="LeadOne 앱의 개인정보 처리방침입니다. Apple 건강 앱 ECG 데이터 접근, 기기 내 처리, 저장, 삭제, 권한 관리 방법을 안내합니다."
+  >
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --surface-soft: #f0f4ff;
+      --text: #18212f;
+      --muted: #536179;
+      --line: #d8dfeb;
+      --accent: #2f6df6;
+      --accent-soft: #eaf1ff;
+      --warning-bg: #fff8e8;
+      --warning-line: #f0d58a;
+      --shadow: 0 18px 40px rgba(34, 52, 84, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 180px);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .wrap {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 64px;
+    }
+
+    .hero,
+    .section,
+    .notice {
+      background: var(--surface);
+      border: 1px solid rgba(216, 223, 235, 0.9);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 32px 28px;
+      margin-bottom: 20px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      line-height: 1.18;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .section {
+      padding: 24px 24px 20px;
+      margin-bottom: 16px;
+    }
+
+    .notice {
+      padding: 18px 20px;
+      margin-bottom: 20px;
+      background: var(--warning-bg);
+      border-color: var(--warning-line);
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .summary-item {
+      padding: 16px;
+      border-radius: 8px;
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+    }
+
+    .summary-item strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .footer {
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+      padding-top: 8px;
+    }
+
+    code {
+      padding: 1px 6px;
+      border-radius: 6px;
+      background: #eef2f8;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        width: min(100%, calc(100% - 20px));
+        padding-top: 20px;
+      }
+
+      .hero,
+      .section,
+      .notice {
+        border-radius: 8px;
+      }
+
+      .hero,
+      .section {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">LeadOne Privacy Policy</div>
+      <h1>LeadOne 개인정보 처리방침</h1>
+      <p>
+        LeadOne은 사용자가 허용한 Apple 건강 앱의 Apple Watch ECG 데이터를 불러와
+        ECG 파형과 관련 정보를 확인할 수 있도록 돕는 iOS 앱입니다. 본 개인정보
+        처리방침은 앱이 어떤 데이터를 접근하고, 어떻게 사용하며, 사용자가 이를
+        어떻게 관리할 수 있는지 설명합니다.
+      </p>
+      <p class="meta">최종 업데이트: 2026-05-22</p>
+
+      <div class="summary" aria-label="요약">
+        <div class="summary-item">
+          <strong>핵심 요약</strong>
+          Apple 건강 앱 ECG 데이터는 사용자가 허용한 경우에만 읽으며, 현재 버전은
+          기기 내부에서만 처리합니다.
+        </div>
+        <div class="summary-item">
+          <strong>외부 전송 여부</strong>
+          현재 버전은 서버 업로드, 외부 API 전송, 광고, 추적, 제3자 공유를 하지
+          않습니다.
+        </div>
+      </div>
+    </section>
+
+    <section class="notice">
+      <strong>게시 전 확인 필요</strong>
+      <p>
+        아래 문의 정보는 실제 값으로 반영되었습니다. 공개 전 최종 표기만 한 번 더 확인해 주세요.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>1. 접근하는 데이터</h2>
+      <p>사용자가 허용한 경우 LeadOne은 Apple 건강 앱에서 다음 정보를 읽을 수 있습니다.</p>
+      <ul>
+        <li>Apple Watch ECG 기록</li>
+        <li>ECG 파형 측정값</li>
+        <li>ECG 시작 시간과 종료 시간</li>
+        <li>HealthKit에서 제공하는 ECG classification</li>
+        <li>제공되는 경우 평균 심박수</li>
+        <li>제공되는 경우 sampling frequency</li>
+        <li>voltage measurement 개수</li>
+        <li>제공되는 경우 증상 상태 정보</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>2. 리뷰어용 샘플 ECG 데이터</h2>
+      <p>
+        LeadOne은 실제 Apple 건강 앱 데이터가 없는 환경에서도 앱 기능을 확인할 수
+        있도록 읽기 전용 샘플 ECG 데이터 모드를 포함할 수 있습니다.
+      </p>
+      <ul>
+        <li>샘플 ECG 데이터는 실제 사용자의 현재 Apple 건강 앱 데이터로 취급하지 않습니다.</li>
+        <li>샘플 ECG 데이터는 실제 HealthKit 흐름과 분리된 읽기 전용 데모 모드에서만 사용됩니다.</li>
+        <li>샘플 ECG 데이터는 HealthKit에 다시 쓰지 않습니다.</li>
+        <li>샘플 ECG 데이터는 서버나 외부 API로 전송하지 않습니다.</li>
+        <li>앱 안에서 <code>샘플 ECG 데이터</code>임을 명확히 표시합니다.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>3. 앱이 생성하거나 저장하는 데이터</h2>
+      <p>LeadOne은 사용자의 기기 내부에 다음 정보를 저장할 수 있습니다.</p>
+      <ul>
+        <li>가져온 ECG 기록</li>
+        <li>화면 표시를 위한 ECG 파형 데이터</li>
+        <li>ECG metadata</li>
+        <li>동일 ECG 기록의 중복 저장 방지를 위한 식별 정보</li>
+        <li>초기 안내 확인 여부 등 앱 사용 상태 정보</li>
+        <li>현재 빌드에 포함되는 경우 리뷰어용 읽기 전용 샘플 ECG 리소스</li>
+      </ul>
+      <p>
+        앱에 참고 분석 기능이 포함되는 경우에도 ECG 데이터와 관련 정보는 현재
+        버전 기준으로 기기 내부에서만 처리됩니다.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>4. 데이터 사용 목적</h2>
+      <ul>
+        <li>Apple 건강 앱에서 ECG 기록 가져오기</li>
+        <li>ECG 기록을 기기 내부에 저장하고 다시 표시하기</li>
+        <li>ECG waveform chart와 metadata 표시하기</li>
+        <li>동일 ECG 기록의 중복 저장 방지</li>
+        <li>리뷰어용 읽기 전용 샘플 데모 흐름 제공</li>
+        <li>현재 빌드에 포함되는 경우 기기 내부 참고 분석 기능 제공</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>5. 기기 내 처리</h2>
+      <p>LeadOne은 ECG 데이터와 앱 내부 생성 정보를 사용자의 기기 내부에서 처리합니다.</p>
+      <ul>
+        <li>서버 업로드 없음</li>
+        <li>외부 API 전송 없음</li>
+        <li>제3자 공유 없음</li>
+        <li>광고 SDK 없음</li>
+        <li>추적 없음</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>6. 건강 데이터와 광고</h2>
+      <p>
+        LeadOne은 Apple 건강 앱 데이터와 ECG 관련 정보를 광고, 마케팅, 사용자
+        프로파일링 또는 추적 목적으로 사용하지 않습니다.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>7. 데이터 공유</h2>
+      <p>
+        현재 버전의 LeadOne은 ECG 데이터나 앱 내부 생성 정보를 제3자와 공유하지
+        않습니다. 서버 기반 계정, 외부 데이터베이스 연동, 외부 연구 업로드 기능도
+        제공하지 않습니다.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>8. 데이터 저장과 삭제</h2>
+      <p>
+        LeadOne은 가져온 ECG 데이터와 앱 동작에 필요한 정보를 iOS 로컬 저장소에
+        저장할 수 있습니다.
+      </p>
+      <ul>
+        <li>앱을 삭제하면 앱 내부에 저장된 데이터는 함께 삭제될 수 있습니다.</li>
+        <li>앱을 삭제해도 Apple 건강 앱의 원본 ECG 기록은 삭제되지 않습니다.</li>
+        <li>원본 ECG 기록 관리는 Apple 건강 앱과 iOS 설정에서 직접 해야 합니다.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>9. Apple 건강 앱 권한 관리</h2>
+      <p>
+        사용자는 언제든지 iOS 설정 또는 Apple 건강 앱에서 LeadOne의 건강 데이터
+        접근 권한을 허용하거나 철회할 수 있습니다.
+      </p>
+      <ul>
+        <li><code>iOS 설정 &gt; 개인정보 보호 및 보안 &gt; 건강 &gt; LeadOne</code></li>
+        <li><code>Apple 건강 앱 &gt; 프로필 또는 계정 아이콘 &gt; 앱 &gt; LeadOne</code></li>
+      </ul>
+      <p>
+        iOS 버전에 따라 실제 경로는 달라질 수 있습니다. 권한을 철회하면 새로운 ECG
+        기록을 가져오지 못할 수 있습니다.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>10. 아동 개인정보</h2>
+      <p>
+        LeadOne은 아동을 대상으로 설계된 앱이 아니며, 아동의 개인정보를 고의로
+        수집하지 않습니다.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>11. 보안</h2>
+      <p>
+        LeadOne은 iOS의 시스템 보호와 로컬 앱 저장소를 사용하여 기기 내부의 앱
+        데이터를 보호합니다. 다만 어떤 저장 방식도 완전할 수는 없으므로, 사용자는
+        기기 암호, 생체 인증, 최신 iOS 업데이트 등 기기 보안 설정을 유지하는 것이
+        좋습니다.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>12. 건강 관련 안내</h2>
+      <p>
+        LeadOne은 ECG 데이터를 확인하고 참고 정보를 제공하는 앱입니다. 앱은 의료적
+        진단이나 치료 판단을 대신하지 않습니다. 증상이 있거나 결과가 걱정되는 경우
+        의료 전문가와 상담해 주세요.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>13. 개인정보 처리방침의 변경</h2>
+      <p>
+        앱의 데이터 처리 방식이 변경되는 경우 본 개인정보 처리방침을 업데이트할 수
+        있습니다. 변경 시 이 페이지에 최신 버전을 게시하고 최종 업데이트 날짜를
+        함께 수정합니다.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>14. 문의</h2>
+      <ul>
+        <li>개발자 또는 회사명: <code>유준혁 (JunHyeok Yoo)</code></li>
+        <li>이메일: <code>wnsgur9359@naver.com</code></li>
+        <li>국가/지역: 대한민국</li>
+      </ul>
+    </section>
+
+    <p class="footer">
+      LeadOne Privacy Policy
+    </p>
+  </main>
+</body>
+</html>
